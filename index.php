@@ -20,10 +20,15 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary" type="submit">Search</button>
+
+
+      <!-- added form method and inputs name here -->
+      <form method="POST" class="d-flex">
+        <input name="search_value" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary" type="submit" name="search_btn">Search</button>
       </form>
+
+
     </div>
   </div>
 </nav>
@@ -66,8 +71,17 @@
                    die("Connection failed : ".$connection->connect_error); 
                 }
                  
-                // read all row from database table
-                $sql = "SELECT * FROM clients";
+           
+                // ================ start of search logic ===================================
+
+                if (isset($_POST['search_btn'])) {
+                  $search_value =  $_POST['search_value'];
+                  $sql = "SELECT * FROM clients where Hostel_name like '%$search_value%'  ";
+                }else{
+                  $sql = "SELECT * FROM clients";
+                }
+                // ================ end of search logic ===================================
+
                 $result = $connection ->query($sql);
 
                 if(!$result){
