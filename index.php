@@ -61,6 +61,7 @@ body {
 </style>
 </head>
 <body>
+<<<<<<< HEAD
 <center>
 <nav class="navbar">
         <div class="logo">
@@ -73,6 +74,31 @@ body {
         
         </div>
     </nav></center>
+=======
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home.php">Hostel Guide</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    
+      </ul>
+
+
+      <!-- added form method and inputs name here -->
+      <form method="POST" class="d-flex">
+        <input name="search_value" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary" type="submit" name="search_btn">Search</button>
+      </form>
+
+
+    </div>
+  </div>
+</nav>
+>>>>>>> 5ab04e82f7223d4e7e4590384e54c53094b2f8e3
 
 
 
@@ -112,8 +138,17 @@ body {
                    die("Connection failed : ".$connection->connect_error); 
                 }
                  
-                // read all row from database table
-                $sql = "SELECT * FROM clients";
+           
+                // ================ start of search logic ===================================
+
+                if (isset($_POST['search_btn'])) {
+                  $search_value =  $_POST['search_value'];
+                  $sql = "SELECT * FROM clients where Hostel_name like '%$search_value%'  ";
+                }else{
+                  $sql = "SELECT * FROM clients";
+                }
+                // ================ end of search logic ===================================
+
                 $result = $connection ->query($sql);
 
                 if(!$result){
