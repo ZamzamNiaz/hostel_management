@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         html, body {
+            background-color:#54DEFD;
             height: 100%;
             margin: 0;
             display: flex;
@@ -15,7 +16,7 @@
         }
         form {
             width: 300px;
-            border: 1px solid black;
+            border: 1px solid white;
             padding: 20px;
             border-radius: 5px;
             box-sizing: border-box;
@@ -32,7 +33,7 @@
             padding: 10px;
             margin-top: 10px;
             box-sizing: border-box;
-            background-color:  rgb(103, 103, 161);
+            background-color: #0096c7;
             color: white;
             border: none;
             border-radius: 3px;
@@ -44,7 +45,7 @@
     
     
 <form id="registerForm" action="register.php" method="post">
-    <h2>Register</h2>
+    <h2 style="color:white;">Register</h2>
     <input type="text" name="email" placeholder="Email" required><br>
     <input type="password" name="password" placeholder="Password" required><br>
     <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>

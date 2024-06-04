@@ -1,9 +1,11 @@
 body{
-    background-color:rgb(221, 216, 236);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    background-color:#49C6E5;
 }
 
 .navbar{
-    background-color: rgb(103, 103, 161);
+    background-color: rgb(61, 61, 85);
     color: white;
 }
 .navbar a:hover{

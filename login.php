@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     <style>
         html, body {
+            background-color:#54DEFD;
             height: 100%;
             margin: 0;
             display: flex;
@@ -30,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         form {
             width: 300px;
-            border: 1px solid black;
+            border: 1px solid white;
             padding: 20px;
             border-radius: 5px;
             box-sizing: border-box;
@@ -47,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 10px;
             margin-top: 10px;
             box-sizing: border-box;
-            background-color:rgb(103, 103, 161);
+            background-color:#0096c7;
             color: white;
             border: none;
             border-radius: 3px;
@@ -58,12 +59,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
     <form action="login.php" method="post">
-        <h2>Login</h2>
+        <h2 style="color:white;">Login</h2>
         <input type="text" name="email" placeholder="Email" required><br>
         <input type="password" name="password" placeholder="Password" required><br>
         <input type="submit" value="Login">
 
-        <p>Don't have an account? <a href="register.php">Register here</a>.</p>
+        <p style="color:white;">Don't have an account? <a href="register.php">Register here</a>.</p>
     </form>
 </body>
 </html>

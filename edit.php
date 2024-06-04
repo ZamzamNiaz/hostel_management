@@ -93,28 +93,70 @@ if($_SERVER['REQUEST_METHOD']== 'GET'){
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src= "	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.navbar {
+    margin-top:1%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0096c7;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+}
+.logo:hover{
+    color:#54DEFD;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color:#54DEFD;
+    color: rgb(61, 61, 85);
+    border-radius: 4px;
+}
+</style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Hostel Guide</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+<center>
+<nav class="navbar">
+        <div class="logo">
+        <span><a href="home.php">ZN</a></span>
+        </div>
+        <div class="nav-links">
+            <a href="hostels.php">Hostels</a>
+            <a href="about.php">About Me</a>
+        
+        </div>
+    </nav></center>
 
     <div class="container my-5">
         <h2>New Hostel</h2>
